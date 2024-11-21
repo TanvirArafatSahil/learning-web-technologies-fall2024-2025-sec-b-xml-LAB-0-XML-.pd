@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <title>Login Screen</title>
+</head>
+<body>
+        <form action="logincheck.php" method="post">
+            <fieldset>
+                <legend>Name</legend>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name" value="" placeholder="type your name" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+							</br>
+                            <input type="submit" name="submit" value="Submit"  />
+                        </td>
+                    </tr>
+                </table>
+				<!-- Display error or success messages -->
+				<?php if (!empty($error)): ?>
+					<p class="error"><?php echo $error; ?></p>
+				<?php elseif (!empty($success)): ?>
+					<p class="success"><?php echo $success; ?></p>
+				<?php endif; ?>
+        </fieldset>     
+        </form> 
+</body>
+</html>
